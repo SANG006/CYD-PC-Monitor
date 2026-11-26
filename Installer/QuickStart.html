@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CYD PC Monitor — เริ่มใช้งาน</title>
+<style>body{margin:0;background:#f2f5fa;color:#19233a;font:17px/1.8 "Segoe UI",Tahoma,sans-serif}main{max-width:840px;margin:40px auto;padding:32px;background:white;border-radius:16px}h1{font-size:32px;margin:0 0 8px}h2{font-size:23px;margin-top:28px}p{margin:10px 0}li{margin:8px 0}a{color:#135bba}aside{padding:16px;background:#eef5ff;border-radius:10px}code{font-size:15px;word-break:break-word}</style>
+</head><body><main>
+<h1>CYD PC Monitor</h1><p>จอแสดงสถานะคอมพิวเตอร์ผ่าน USB • ชุดติดตั้ง 1.2.0 / เฟิร์มแวร์ 1.2</p>
+<p>เฟิร์มแวร์ 1.2 แก้ข้อความและช่องกระพริบเวลาอัปเดต โดยเตรียมภาพก่อนส่งลงจอและวาดเฉพาะส่วนที่เปลี่ยน บอร์ดที่ใช้เฟิร์มแวร์ 1.1 ต้องอัปโหลดเฟิร์มแวร์ 1.2 หนึ่งครั้ง การติดตั้งแอปอย่างเดียวไม่เปลี่ยนโปรแกรมบนบอร์ด</p>
+<p>เมื่อติดตั้งทับรุ่นเดิม ตัวติดตั้งจะถอน CYD PC Monitor รุ่นเดิมก่อนลงรุ่นใหม่และเก็บการตั้งค่าไว้ กรุณาปิดแอปเดิมก่อนเริ่ม หากถอนรุ่นเดิมไม่ได้ ตัวติดตั้งจะหยุดพร้อมแจ้งสาเหตุ</p>
+<p>ค่า CPU ใช้ Windows Processor Utility ซึ่งเป็นวิธีวัดที่ Task Manager บนเครื่องที่ทดสอบใช้ ตัวเลขอาจต่างกันเล็กน้อยตามเวลาที่เก็บตัวอย่างและการปัดเศษ หาก Windows อ่านค่านี้ไม่ได้ แอปจะแสดง N/A</p>
+<h2>เริ่มใช้งานบนคอมเครื่องใหม่</h2>
+<ol>
+<li>ต่อบอร์ด CYD ด้วยสาย USB ที่ส่งข้อมูลได้ บอร์ดที่ลง PC Monitor แล้วใช้งานได้ทันที</li>
+<li>เปิด <strong>CYD PC Monitor</strong> จากเดสก์ท็อปหรือเมนู Start</li>
+<li>กด <strong>ค้นหาพอร์ต</strong> เลือก COM ของบอร์ด แล้วกด <strong>เชื่อมต่อ</strong> หมายเลขพอร์ตอาจต่างจากคอมเครื่องเดิม</li>
+<li>เลือกค่าแต่ละช่อง เลือก 4 หรือ 6 ช่อง ปรับสีและความสว่าง แล้วกด <strong>บันทึกการตั้งค่า</strong></li>
+</ol>
+<aside>แอปต้องเปิดอยู่เพื่อส่งข้อมูลไปยังบอร์ด ปุ่ม <strong>ซ่อนไว้ข้างนาฬิกา</strong> ให้ทำงานต่อในถาดระบบ ดับเบิลคลิกไอคอนเพื่อเปิดหน้าตั้งค่ากลับมา</aside>
+<h2>ไม่พบพอร์ต USB</h2>
+<p>ลองสาย USB อีกเส้นและตรวจ Device Manager บอร์ด CYD รุ่นนี้ใช้ชิป CH340 หากยังไม่มีไดรเวอร์ ให้ดาวน์โหลดจาก <a href="https://www.wch-ic.com/downloads/CH341SER_EXE.html">เว็บไซต์ WCH ทางการ</a> การติดตั้งไดรเวอร์อาจต้องใช้สิทธิ์ผู้ดูแลระบบ</p>
+<p>ปิด Serial Monitor ของ Arduino และแอปอื่นที่ใช้พอร์ตเดียวกันก่อนเชื่อมต่อ</p>
+<h2>อุณหภูมิแสดง N/A</h2>
+<p>ค่าที่อ่านไม่ได้จะแสดง N/A ฮาร์ดแวร์บางรุ่นต้องติดตั้ง <a href="https://pawnio.eu/">PawnIO ทางการ</a> และเปิดแอปด้วย <strong>Run as administrator</strong> ค่าที่มีขึ้นอยู่กับ CPU/GPU ของคอมแต่ละเครื่อง ตัวติดตั้งแอปไม่ติดตั้งไดรเวอร์ USB หรือ PawnIO ให้อัตโนมัติ</p>
+<h2>บอร์ดใหม่ที่ยังไม่ได้ลง PC Monitor</h2>
+<p>สำหรับบอร์ด CYD ESP32-2432S028R ให้เลือกพอร์ต USB แล้วกด <strong>อัปโหลดเฟิร์มแวร์</strong> ยืนยันพอร์ตและรอให้ครบ 100% ขณะอัปโหลดให้เสียบ USB ไว้ เมื่อเสร็จแอปจะเชื่อมต่อบอร์ดอีกครั้ง บอร์ดที่ลงเฟิร์มแวร์ 1.2 แล้วพร้อมใช้งาน</p>
+<h2>เปิดพร้อม Windows</h2>
+<p>เลือกพอร์ตของบอร์ดและกด <strong>บันทึกการตั้งค่า</strong> จากนั้นติ๊ก <strong>เปิดพร้อม Windows (ซ่อนไว้ข้างนาฬิกา)</strong> การเปิดหรือปิดมีผลทันทีสำหรับการลงชื่อเข้าใช้ครั้งถัดไป เปิดหน้าตั้งค่าจากไอคอนข้างนาฬิกา</p>
+<h2>ข้อมูลและการถอนติดตั้ง</h2>
+<p>แอปอ่านสถานะจากคอมแล้วส่งไปยังบอร์ดทาง USB ใช้ข้อมูลภายในเครื่อง ไม่ต้องสมัครบัญชี ตั้งค่าเก็บที่ <code>%LOCALAPPDATA%\CYD-PC-Monitor\settings.json</code> แยกกันบนคอมแต่ละเครื่อง</p>
+<p>ถอนติดตั้งผ่าน Windows Settings → Apps → CYD PC Monitor ข้อมูลตั้งค่าส่วนตัวจะยังอยู่เพื่อใช้เมื่อติดตั้งใหม่</p>
+<p>ต้องใช้ Windows 10 รุ่น 1809 ขึ้นไป หรือ Windows 11 บนคอม x64 และ .NET Framework 4.7.2 ขึ้นไป ตัวติดตั้งตรวจเงื่อนไขนี้ก่อนติดตั้ง หากขาด ให้ติดตั้งจาก <a href="https://dotnet.microsoft.com/download/dotnet-framework">Microsoft ทางการ</a></p>
+<h2>ซอฟต์แวร์ภายนอก</h2>
+<p>รวม <a href="https://github.com/LibreHardwareMonitor/LibreHardwareMonitor/tree/v0.9.6">LibreHardwareMonitor 0.9.6</a> และไลบรารีที่จำเป็นโดยไม่แก้ไข ดูสัญญาอนุญาตในโฟลเดอร์ Licenses ตัวติดตั้งสร้างด้วย <a href="https://jrsoftware.org/">Inno Setup</a></p>
+<p>การอัปโหลดใช้ <a href="https://github.com/espressif/esptool/releases/tag/v5.3.1">Espressif esptool 5.3.1</a> ซึ่งมีใบอนุญาตและซอร์สโค้ดในโฟลเดอร์ FlashTool</p>
+</main></body></html>

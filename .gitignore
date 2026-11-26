@@ -1,0 +1,7 @@
+/Windows/CYD-PC-Monitor.exe
+**/build/
+*.elf
+*.map
+*.log
+settings.json
+*fullflash*
